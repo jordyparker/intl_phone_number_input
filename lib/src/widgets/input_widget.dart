@@ -63,6 +63,7 @@ class InternationalPhoneNumberInput extends StatefulWidget {
   final bool isEnabled;
   final bool formatInput;
   final bool autoFocus;
+  final bool readOnly;
   final bool autoFocusSearch;
   final AutovalidateMode autoValidateMode;
   final bool ignoreBlank;
@@ -105,6 +106,7 @@ class InternationalPhoneNumberInput extends StatefulWidget {
       this.maxLength = 15,
       this.isEnabled = true,
       this.formatInput = true,
+      this.readOnly = false,
       this.autoFocus = false,
       this.autoFocusSearch = false,
       this.autoValidateMode = AutovalidateMode.disabled,
@@ -428,6 +430,7 @@ class _InputWidgetView
               keyboardType: widget.keyboardType,
               textInputAction: widget.keyboardAction,
               style: widget.textStyle,
+              readOnly: widget.readOnly,
               decoration: state.getInputDecoration(widget.inputDecoration),
               textAlign: widget.textAlign,
               textAlignVertical: widget.textAlignVertical,
